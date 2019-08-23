@@ -1,0 +1,24 @@
+[category]
+other = "категория"
+
+[tag]
+other = "тэг"
+
+[series]
+other = "серия"
+
+[reading_time]
+one = "читается за минуту"
+other = "отнимет {{ .Count }} мин"
+
+[page_not_found]
+other = "Страница не найдена"
+
+[page_does_not_exist]
+other = "Сори, такая страница не существует."
+
+[head_back]
+other = "Вы можете <a href=\"{{ . }}\">вернуться главную страницу</a>."
+
+[powered_by]
+other = "Это работает на"
