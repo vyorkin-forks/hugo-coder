@@ -28,7 +28,10 @@
 
       <footer>
         {{ partial "posts/series.html" . }}
-        {{ partial "posts/disqus.html" . }}
+
+        {{ if .Site.Params.disqus }}
+          {{ partial "posts/disqus.html" . }}
+        {{ end }}
         {{ partial "posts/commento.html" . }}
       </footer>
     </article>
