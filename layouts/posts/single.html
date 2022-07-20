@@ -29,7 +29,9 @@
 
       <div>
         {{ if .Params.featuredImage }}
-          <img src="{{ .Params.featuredImage | relURL }}" alt="Featured image"/>
+          <div class="post-image">
+            <img src="{{ .Params.featuredImage | relURL }}" alt="Featured image"/>
+          </div>
         {{ end }}
         {{ .Content }}
       </div>

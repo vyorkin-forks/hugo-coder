@@ -15,7 +15,7 @@ one = "автор"
 other = "authors"
 
 [posts]
-other = "статьи"
+other = "статейки"
 
 [reading_time]
 one = "Читать одну минуту"
