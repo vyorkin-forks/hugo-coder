@@ -1,0 +1,66 @@
+.messageText {
+    fill: $neutral-color-mermaid !important;
+    stroke: none !important;
+    font-weight: normal !important;
+    font-size: 1.8rem !important;
+}
+.messageLine0, .messageLine1, .messageLine2, .messageLine3 {
+    stroke: $neutral-color-mermaid !important;
+}
+#arrowhead path {
+    stroke: $neutral-color-mermaid !important;
+    fill: $neutral-color-mermaid !important;
+}
+.actor {
+    fill: $bg-color-mermaid !important;
+    stroke: $border-color-mermaid !important;
+}
+text.actor > tspan {
+    fill: $fg-color-mermaid !important;
+}
+.node path, .node-polygon, .node rect {
+    fill: $bg-color-mermaid !important;
+    stroke: $line-color-mermaid !important;
+}
+.nodeLabel {
+    color: $fg-color-mermaid !important;
+    font-weight: normal !important;
+    font-size: 1.4rem !important;
+}
+
+.activation0 {
+    stroke: $line-color-mermaid !important;
+    fill: $fg-color-mermaid !important;
+}
+
+.note {
+    stroke: none !important;
+    fill: $border-color-mermaid !important;
+}
+.noteText > tspan {
+    font-size: 1.4rem !important;
+}
+
+.divider {
+    stroke: $border-color-mermaid !important;
+}
+
+.actor-man > text.actor > tspan {
+    fill: $bg-color-mermaid !important;
+}
+
+.actor-man circle {
+    stroke: $bg-color-mermaid !important;
+    fill: $bg-color-mermaid !important;
+}
+
+.classTitle {
+    font-weight: 400 !important;
+}
+
+.edgeLabel {
+    background: transparent !important;
+    color: #aaa !important;
+    font-size: 1.4rem !important;
+    padding: 1rem;
+}

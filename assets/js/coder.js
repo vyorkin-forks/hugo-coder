@@ -13,8 +13,10 @@ if (localStorage.getItem("colorscheme")) {
 
 if (darkModeToggle) {
     darkModeToggle.addEventListener('click', () => {
-        let theme = body.classList.contains("colorscheme-dark") ? "light" : "dark";
+        const theme = body.classList.contains("colorscheme-dark") ? "light" : "dark";
+        const inverse = theme === 'dark' ? 'light' : 'dark';
         setTheme(theme);
+        switchTweetTheme(inverse, theme);
         rememberTheme(theme);
     });
 }
@@ -28,32 +30,33 @@ document.addEventListener("DOMContentLoaded", function () {
     node.classList.remove('preload-transitions');
 });
 
+function waitForElm(selector) {
+    return new Promise(resolve => {
+        if (document.querySelector(selector)) {
+            return resolve(document.querySelector(selector));
+        }
+
+        const observer = new MutationObserver(mutations => {
+            if (document.querySelector(selector)) {
+                resolve(document.querySelector(selector));
+                observer.disconnect();
+            }
+        });
+
+        observer.observe(document.body, {
+            childList: true,
+            subtree: true
+        });
+    });
+}
+
+
 function setTheme(theme) {
     body.classList.remove('colorscheme-auto');
     let inverse = theme === 'dark' ? 'light' : 'dark';
     body.classList.remove('colorscheme-' + inverse);
     body.classList.add('colorscheme-' + theme);
     document.documentElement.style['color-scheme'] = theme;
-
-    function waitForElm(selector) {
-        return new Promise(resolve => {
-            if (document.querySelector(selector)) {
-                return resolve(document.querySelector(selector));
-            }
-    
-            const observer = new MutationObserver(mutations => {
-                if (document.querySelector(selector)) {
-                    resolve(document.querySelector(selector));
-                    observer.disconnect();
-                }
-            });
-
-            observer.observe(document.body, {
-                childList: true,
-                subtree: true
-            });
-        });
-    }
 
     if (theme === 'dark') {
         const message = {
@@ -63,7 +66,7 @@ function setTheme(theme) {
         waitForElm('.utterances-frame').then((iframe) => {
             iframe.contentWindow.postMessage(message, 'https://utteranc.es');
         })
-        
+
     }
     else {
         const message = {
@@ -73,9 +76,24 @@ function setTheme(theme) {
         waitForElm('.utterances-frame').then((iframe) => {
             iframe.contentWindow.postMessage(message, 'https://utteranc.es');
         })
-        
+
     }
-    
+
+}
+
+waitForElm('[data-tweet-id]').then(() => {
+    const theme = localStorage.getItem("colorscheme") | "dark";
+    const inverse = theme === 'dark' ? 'light' : 'dark';
+    switchTweetTheme(inverse, theme);
+});
+
+function switchTweetTheme(currentTheme, targetTheme) {
+    var tweets = document.querySelectorAll('[data-tweet-id]');
+
+    tweets.forEach(function(tweet) {
+        var src = tweet.getAttribute("src");
+        tweet.setAttribute("src", src.replace("theme=" + currentTheme, "theme=" + targetTheme));
+    });
 }
 
 function rememberTheme(theme) {

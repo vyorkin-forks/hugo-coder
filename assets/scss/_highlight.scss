@@ -1,0 +1,9 @@
+.highlight {
+    overflow: auto;
+    & > pre {
+        background-color: #111 !important;
+        border-radius: 0.5rem;
+        border: 0.4rem solid #444;
+        box-shadow: 1px 1px 0.5em #000 inset;
+    };
+}

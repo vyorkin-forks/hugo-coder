@@ -30,7 +30,7 @@ $darker-alt-bg-color: #ccc !default;
 $link-color: #1565c0 !default;
 
 // Dark colors
-$bg-color-dark: #212121 !default;
+$bg-color-dark: #151515 !default;
 $fg-color-dark: #dadada !default;
 $alt-bg-color-dark: #424242 !default;
 $alt-fg-color-dark: #dadada !default;
@@ -59,3 +59,30 @@ $bg-color-notice-warning-content: #ffca281a !default;
 $fg-color-notice-error-icon: #e53935 !default;
 $bg-color-notice-error-title: #f443361a !default;
 $bg-color-notice-error-content: #ef53501a !default;
+
+// Quote2 colors
+$bg-color-quote2: #eee !default;
+$bg-color-quote2-note: #7e57c21a !default;
+$bg-color-quote2-tip: #26a69a1a !default;
+$bg-color-quote2-example: #8d6e631a !default;
+$bg-color-quote2-question: #9ccc651a !default;
+$bg-color-quote2-info: #42a5f51a !default;
+$bg-color-quote2-warning: #ffca281a !default;
+$bg-color-quote2-error: #ef53501a !default;
+
+$border-color-quote2: #aaaaa !default;
+$border-color-quote2-note: #5e35b1 !default;
+$border-color-quote2-tip: #00897b !default;
+$border-color-quote2-example: #6d4c41 !default;
+$border-color-quote2-question: #7cb342 !default;
+$border-color-quote2-info: #1e88e5 !default;
+$border-color-quote2-warning: #ffb300 !default;
+$border-color-quote2-error: #e53935 !default;
+
+// Mermaid colors
+
+$bg-color-mermaid: #666 !default;
+$fg-color-mermaid: #fff !default;
+$neutral-color-mermaid: #999 !default;
+$border-color-mermaid: #444 !default;
+$line-color-mermaid: #737373 !default;

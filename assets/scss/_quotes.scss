@@ -1,0 +1,60 @@
+.quote2 {
+  margin: 20px auto;
+  font-style: normal;
+  padding: 2rem 2rem 1rem 4rem;
+  border-left: 8px solid $border-color-quote2;
+  position: relative;
+  line-height: 3.2rem;
+  /* font-style: italic; */
+  /* background-color: $bg-color-quote2; */
+}
+
+.quote2-note {
+    background-color: $bg-color-quote2-note;
+    border-left-color: $border-color-quote2-note;
+}
+.quote2-tip {
+    background-color: $bg-color-quote2-tip;
+    border-left-color: $border-color-quote2-tip;
+}
+.quote2-example {
+    background-color: $bg-color-quote2-example;
+    border-left-color: $border-color-quote2-example;
+}
+.quote2-question {
+    background-color: $bg-color-quote2-question;
+    border-left-color: $border-color-quote2-question;
+}
+.quote2-warning {
+    background-color: $bg-color-quote2-warning;
+    border-left-color: $border-color-quote2-warning;
+}
+.quote2-error {
+    background-color: $bg-color-quote2-error;
+    border-left-color: $border-color-quote2-error;
+}
+
+.quote2::before {
+  font-family: Arial;
+  content: "\201C";
+  color: #888;
+  font-size: 5rem;
+  font-style: italic;
+  position: absolute;
+  left: 10px;
+  top: 18px;
+}
+
+.quote2::after {
+  content: '';
+}
+
+.quote2 > .quote2-author {
+  display: block;
+  color: #888;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 0.8em;
+  text-align: right;
+}

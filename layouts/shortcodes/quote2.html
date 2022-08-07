@@ -1,0 +1,9 @@
+{{- $type := .Get 0 -}}
+{{- $author := .Get 1 -}}
+{{- $inner := .Inner | .Page.RenderString | chomp -}}
+<blockquote class="quote2 quote2-{{ $type }}">
+    {{- $inner -}}
+    {{ if $author }}
+      <span class="quote2-author">{{- $author -}}</span>
+    {{ end }}
+</blockquote>
