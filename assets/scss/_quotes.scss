@@ -1,12 +1,10 @@
 .quote2 {
   margin: 20px auto;
   font-style: normal;
-  padding: 2rem 2rem 1rem 4rem;
+  padding: 2rem 4rem 2rem 4rem;
   border-left: 8px solid $border-color-quote2;
   position: relative;
   line-height: 3.2rem;
-  /* font-style: italic; */
-  /* background-color: $bg-color-quote2; */
 }
 
 .quote2-note {
@@ -34,7 +32,7 @@
     border-left-color: $border-color-quote2-error;
 }
 
-.quote2::before {
+.quote2:not(.no-quote)::before {
   font-family: Arial;
   content: "\201C";
   color: #888;
@@ -45,7 +43,7 @@
   top: 18px;
 }
 
-.quote2::after {
+.quote2:not(.no-quote)::after {
   content: '';
 }
 

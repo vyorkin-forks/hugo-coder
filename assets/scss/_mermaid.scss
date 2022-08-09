@@ -18,7 +18,7 @@
 text.actor > tspan {
     fill: $fg-color-mermaid !important;
 }
-.node path, .node-polygon, .node rect {
+.node path, .node-polygon, .node rect, .node polygon {
     fill: $bg-color-mermaid !important;
     stroke: $line-color-mermaid !important;
 }
